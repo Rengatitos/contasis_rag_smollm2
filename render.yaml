@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: contasis-rag-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile.render
+    healthCheckPath: /health
+    envVars:
+      - key: DEFAULT_USE_LLM
+        value: "false"
+      - key: CONTASIS_DATA_DIR
+        value: /workspace/data

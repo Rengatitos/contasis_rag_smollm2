@@ -1,0 +1,117 @@
+{
+  "all_expected_sources_present": true,
+  "source_documents": [
+    {
+      "name": "PLAN DE CUENTAS CONTASIS.xlsx",
+      "exists": true,
+      "size_bytes": 181438,
+      "sha256": "f472369d259b6a7476da7c822c40ba57d3806c28af5159e0ed08e5825c4e2afb",
+      "sheets": [
+        "PLAN DE CUENTAS"
+      ]
+    },
+    {
+      "name": "RC CORPORACION 2026 OKI.xlsx",
+      "exists": true,
+      "size_bytes": 616929,
+      "sha256": "97c38d9a4b4e7b8e07536c98184b3ae71aeea1434fdddb8c8b0fd67da1a775aa",
+      "sheets": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO",
+        "AGOSTO",
+        "ENTIDAD",
+        "PLAN CONTABLE",
+        "PCGE",
+        "Hoja1"
+      ]
+    },
+    {
+      "name": "RCV JOAQUISAN 062026.xlsx",
+      "exists": true,
+      "size_bytes": 201799,
+      "sha256": "d30e4e686b2029f018b824a52fda928424829c2a64eab7142554a824cd6f0924",
+      "sheets": [
+        "FORMATO_VENTAS",
+        "FORMATO_ COMPRAS ",
+        "Hoja2",
+        "Hoja1"
+      ]
+    },
+    {
+      "name": "RCV NEGOCIACIONES ESTRADA 062026.xlsx",
+      "exists": true,
+      "size_bytes": 197313,
+      "sha256": "cb33fe53b4a62959bd3cda8f27698a8f1ae2034e0740e94d2ec7dddea6d17224",
+      "sheets": [
+        "FORMATO_VENTAS",
+        "FORMATO_ COMPRAS ",
+        "Hoja3"
+      ]
+    },
+    {
+      "name": "RV CORPORACION 2026.xlsx",
+      "exists": true,
+      "size_bytes": 299197,
+      "sha256": "ef3e068a0126bfc452d048e9442014411d85eacea0ed3c4b99719f50499276f0",
+      "sheets": [
+        "ENERO",
+        "FEBRERO",
+        "MARZO",
+        "ABRIL",
+        "MAYO",
+        "JUNIO",
+        "JULIO"
+      ]
+    }
+  ],
+  "generated_records": {
+    "plan_cuentas": 2881,
+    "historicos": 3212
+  },
+  "normalization_policy": "Los XLSX originales se conservan sin cambios en data/raw. Las versiones limpias para RAG se generan en JSONL y CSV UTF-8 en data/normalized.",
+  "by_source": {
+    "RC/ENERO": 70,
+    "RC/FEBRERO": 270,
+    "RC/MARZO": 151,
+    "RC/ABRIL": 173,
+    "RC/MAYO": 189,
+    "RC/JUNIO": 183,
+    "RC/JULIO": 158,
+    "RC/AGOSTO": 9,
+    "JOA/VENTAS": 367,
+    "JOA/COMPRAS": 123,
+    "EST/VENTAS": 446,
+    "EST/COMPRAS": 0,
+    "RV/ENERO": 137,
+    "RV/FEBRERO": 146,
+    "RV/MARZO": 132,
+    "RV/ABRIL": 134,
+    "RV/MAYO": 184,
+    "RV/JUNIO": 158,
+    "RV/JULIO": 182
+  },
+  "account_total_defaults": {
+    "RC CORPORACION": {
+      "COMPRA": "4212"
+    },
+    "JOAQUISAN": {
+      "VENTA": "1212",
+      "COMPRA": "4212"
+    },
+    "NEGOCIACIONES ESTRADA": {
+      "VENTA": "1212"
+    },
+    "RV CORPORACION": {
+      "VENTA": "1212"
+    },
+    "_GLOBAL": {
+      "COMPRA": "4212",
+      "VENTA": "1212"
+    }
+  }
+}

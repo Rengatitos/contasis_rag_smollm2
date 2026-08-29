@@ -1,0 +1,19 @@
+{
+  "RC CORPORACION": {
+    "COMPRA": "4212"
+  },
+  "JOAQUISAN": {
+    "VENTA": "1212",
+    "COMPRA": "4212"
+  },
+  "NEGOCIACIONES ESTRADA": {
+    "VENTA": "1212"
+  },
+  "RV CORPORACION": {
+    "VENTA": "1212"
+  },
+  "_GLOBAL": {
+    "COMPRA": "4212",
+    "VENTA": "1212"
+  }
+}

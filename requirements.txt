@@ -1,0 +1,5 @@
+jupyterlab>=4.4,<5
+scikit-learn>=1.7,<2
+requests>=2.32,<3
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1

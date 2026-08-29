@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+WORKDIR /workspace
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    CONTASIS_DATA_DIR=/workspace/data \
+    DEFAULT_USE_LLM=false
+
+COPY requirements-render.txt /workspace/requirements-render.txt
+RUN pip install --upgrade pip && pip install -r /workspace/requirements-render.txt
+
+COPY api /workspace/api
+COPY src /workspace/src
+COPY data/catalogos.json /workspace/data/catalogos.json
+COPY data/account_total_defaults.json /workspace/data/account_total_defaults.json
+COPY data/historicos.jsonl /workspace/data/historicos.jsonl
+COPY data/plan_cuentas.jsonl /workspace/data/plan_cuentas.jsonl
+
+EXPOSE 10000
+CMD ["sh", "-c", "uvicorn api.app:app --host 0.0.0.0 --port ${PORT:-10000}"]
